@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call VFS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Call VFS press 2 1 6 </h2>
+
+    <table>
+        <tr>
+            <th>Country</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>Portugal</td>
+            <td><button onclick="callVFS('Portugal')">Call VFS Portugal</button></td>
+        </tr>
+        <tr>
+            <td>Saudi Arabia
+                دوس ٢ 
+                 ١ ٦ 
+            </td>
+            <td><button onclick="callVFS('Saudi Arabia')">Call VFS Saudi Arabia</button></td>
+        </tr>
+    </table>
+
+    <script>
+        function callVFS(country) {
+            let phoneNumber;
+            switch(country) {
+                case 'Portugal':
+                    phoneNumber = 'tel:+351XXXXXXXXX'; // Replace with the actual phone number for VFS Portugal
+                    break;
+                case 'Saudi Arabia':
+                    phoneNumber = 'tel:920007326'; // Replace with the actual phone number for VFS Saudi Arabia
+                    break;
+            }
+            window.location.href = phoneNumber;
+        }
+    </script>
+
+</body>
+</html>
